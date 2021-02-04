@@ -19,4 +19,9 @@ class Encoder
   def is_all_as?(str)
     str.chars.uniq.size == 1 ? true : false
   end
+
+  def is_all_this_letter?(str1, str2)
+    str = str1 + str2
+    str.chars.uniq.size == 1 ? true : false
+  end
 end
