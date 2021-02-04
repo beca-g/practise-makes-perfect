@@ -24,4 +24,8 @@ class Encoder
     str = str1 + str2
     str.chars.uniq.size == 1 ? true : false
   end
+
+  def is_all_first_letter?(str)
+    str.chr.chars == str.chars.uniq ? true : false
+  end
 end
