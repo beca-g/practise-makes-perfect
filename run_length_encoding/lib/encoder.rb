@@ -15,4 +15,8 @@ class Encoder
   def string_to_list(str)
     str.chars
   end
+
+  def is_all_as?(str)
+    str.chars.uniq.size == 1 ? true : false
+  end
 end
