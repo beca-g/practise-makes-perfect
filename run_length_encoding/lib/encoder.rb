@@ -9,7 +9,7 @@ class Encoder
   end
 
   def get_first_letter_and_length(str)
-    "#{str.chr}" + "#{str.length}"
+    get_first_letter(str) + get_length(str).to_s
   end
 
   def string_to_list(str)
@@ -17,15 +17,15 @@ class Encoder
   end
 
   def is_all_as?(str)
-    str.chars.uniq.size == 1 ? true : false
+    str.chars.uniq.size == 1 
   end
 
   def is_all_this_letter?(str1, str2)
     str = str1 + str2
-    str.chars.uniq.size == 1 ? true : false
+    str.chars.uniq.size == 1 
   end
 
   def is_all_first_letter?(str)
-    str.chr.chars == str.chars.uniq ? true : false
+    str.chr.chars == str.chars.uniq 
   end
 end
