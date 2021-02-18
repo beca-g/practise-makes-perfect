@@ -40,4 +40,14 @@ class Encoder
     return count
   end
 
+  def get_first_run(str)
+    run = []
+    str.chars.each do |chr|
+      if chr != str.chr
+        return run.join
+      end
+      run << chr
+    end
+    run.join
+  end
 end
