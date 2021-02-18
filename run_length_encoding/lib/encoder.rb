@@ -28,4 +28,16 @@ class Encoder
   def is_all_first_letter?(str)
     str.chr.chars == str.chars.uniq 
   end
+
+  def get_length_of_first_run(str)
+    count = 0
+    str.chars.each do |chr|
+      if chr != str.chr
+        return count
+      end
+      count += 1
+    end
+    return count
+  end
+
 end
